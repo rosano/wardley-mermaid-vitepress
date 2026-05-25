@@ -9,6 +9,8 @@ export default withMermaid({
 
   cleanUrls: true,
   
+  srcExclude: ['**/*README.md'],
+
   head: [['link', { rel: 'icon', href: 'data:;base64,=' }]],
 
   themeConfig: {
