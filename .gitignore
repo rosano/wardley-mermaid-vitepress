@@ -1,0 +1,16 @@
+# NODE
+node_modules
+package-lock.json
+
+# BUILD
+**/__*/*
+
+# OS
+**/*.DS_Store
+
+# LOCAL
+.env*
+
+# VITEPRESS
+.vitepress/dist
+.vitepress/cache
