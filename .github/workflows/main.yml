@@ -1,0 +1,28 @@
+name: Publish
+on: [push]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup
+        run: bash setup.sh
+      - name: Build
+        run: npm run build
+      - name: Index
+        run: npx -y pagefind --site public
+      - uses: actions/configure-pages@v2
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+
