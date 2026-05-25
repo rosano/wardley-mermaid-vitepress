@@ -23,6 +23,7 @@ export default withMermaid({
     ],
 
     sidebar: globSync('wardley-maps-mermaid/*/', { ignore: ['.git/**'] }).filter(e => ![
+    'personal',
     'tools',
   ].includes(e.split('/').pop())).sort().map(path => {
       const slug = tidy(path)
