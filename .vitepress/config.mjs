@@ -1,4 +1,5 @@
-import { withMermaid } from 'vitepress-plugin-mermaid';
+import { withMermaid } from 'vitepress-plugin-mermaid'
+import { pagefindPlugin } from 'vitepress-plugin-pagefind'
 import { globSync } from 'glob'
 
 const tidy = e => e.replace('wardley-maps-mermaid/', '')
@@ -49,5 +50,11 @@ export default withMermaid({
       fontFamily: 'Arial',
     },
   },
+
+  vite:{
+    plugins:[
+      pagefindPlugin(),
+    ],
+  }
 
 });
