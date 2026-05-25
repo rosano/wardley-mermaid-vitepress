@@ -22,7 +22,7 @@ export default withMermaid({
       { text: 'Examples', link: '/api-examples' }
     ],
 
-    sidebar: globSync('wardley-maps-mermaid/*/', { ignore: ['.git/**'] }).sort().map(path => {
+    sidebar: globSync('wardley-maps-mermaid/*/', { ignore: ['.git/**'] }).filter(e => !e.endsWith('tools')).sort().map(path => {
       const slug = tidy(path)
       return {
         text: slug,
