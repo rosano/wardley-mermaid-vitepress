@@ -11,7 +11,7 @@ export default withMermaid({
   base: '/wardley-mermaid-vitepress/',
   cleanUrls: true,
   
-  srcExclude: ['**/*README.md'],
+  srcExclude: ['**/*README.md', '**/vendor/*'],
 
   head: [['link', { rel: 'icon', href: 'data:;base64,=' }]],
 
