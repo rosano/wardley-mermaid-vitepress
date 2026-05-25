@@ -5,7 +5,7 @@ import { globSync } from 'glob'
 const tidy = e => e.replace('wardley-maps-mermaid/', '')
 
 export default withMermaid({
-  title: 'wardey-mermaid-vitepress',
+  title: 'wardley-mermaid-vitepress',
   description: 'site of maps',
 
   base: '/wardley-mermaid-vitepress/',
