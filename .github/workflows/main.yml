@@ -17,11 +17,11 @@ jobs:
       - name: Build
         run: npm run build
       - name: Index
-        run: npx -y pagefind --site public
+        run: npx -y pagefind --site .vitepress/dist
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./.vitepress/dist
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
