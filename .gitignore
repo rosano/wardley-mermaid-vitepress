@@ -14,3 +14,7 @@ package-lock.json
 # VITEPRESS
 .vitepress/dist
 .vitepress/cache
+
+# DEPLOY
+.gitmodules
+wardley-maps-mermaid*
