@@ -4,11 +4,15 @@ Using VitePress to render [tractorjuice/wardley-maps-mermaid](https://github.com
 
 https://rosano.github.io/wardley-mermaid-vitepress/
 
-Setup project by running `setup.sh`:
+# Setup
+
+Run `setup.sh`:
 
 ```
 bash setup.sh
 ```
+
+# Run
 
 Start a web server which reloads on change:
 
