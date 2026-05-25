@@ -16,12 +16,6 @@ export default withMermaid({
   head: [['link', { rel: 'icon', href: 'data:;base64,=' }]],
 
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/api-examples' }
-    ],
-
     sidebar: globSync('wardley-maps-mermaid/*/', { ignore: ['.git/**'] }).filter(e => ![
     'personal',
     'tools',
