@@ -6,6 +6,11 @@ const tidy = e => e.replace('wardley-maps-mermaid/', '')
 export default withMermaid({
   title: 'wardey-mermaid-vitepress',
   description: 'site of maps',
+
+  cleanUrls: true,
+  
+  head: [['link', { rel: 'icon', href: 'data:;base64,=' }]],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -35,8 +40,6 @@ export default withMermaid({
     aside: false,
   },
 
-  head: [['link', { rel: 'icon', href: 'data:;base64,=' }]],
-
   mermaid:{
     theme: 'base',
     themeVariables: {
@@ -44,7 +47,5 @@ export default withMermaid({
       fontFamily: 'Arial',
     },
   },
-
-  cleanUrls: true,
 
 });
