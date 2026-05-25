@@ -26,7 +26,6 @@ export default withMermaid({
       const slug = tidy(path)
       return {
         text: slug,
-        link: '/maps/' + slug,
         items: globSync(`${ path }/**/*.mmd`).sort().map(path => {
           const slug = tidy(path).replace('.mmd', '');
           return {
