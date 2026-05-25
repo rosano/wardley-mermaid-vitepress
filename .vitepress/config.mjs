@@ -8,6 +8,7 @@ export default withMermaid({
   title: 'wardey-mermaid-vitepress',
   description: 'site of maps',
 
+  base: '/wardley-mermaid-vitepress/',
   cleanUrls: true,
   
   srcExclude: ['**/*README.md'],
