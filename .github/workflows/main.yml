@@ -12,8 +12,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v3
-      - name: Setup
-        run: bash setup.sh
+      - name: Submodule
+        run: bash submodule.sh
+      - name: Install dependencies
+        run: npm i
       - name: Build
         run: npm run build
       - name: Index

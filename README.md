@@ -6,10 +6,16 @@ https://rosano.github.io/wardley-mermaid-vitepress/
 
 # Setup
 
-Run `setup.sh`:
+Add `wardley-maps-mermaid` as a git submodule (replace the GitHub link in `submodule.sh` with your own collection if desired):
 
 ```
-bash setup.sh
+bash submodule.sh
+```
+
+Install dependencies:
+
+```
+npm i
 ```
 
 # Run
