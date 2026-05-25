@@ -29,7 +29,7 @@ export default withMermaid({
     }),
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/rosano/wardley-mermaid-vitepress' }
     ],
 
     aside: false,
