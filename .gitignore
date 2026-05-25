@@ -17,4 +17,4 @@ package-lock.json
 
 # DEPLOY
 .gitmodules
-wardley-maps-mermaid*
+source*

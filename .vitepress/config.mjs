@@ -2,7 +2,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 import { pagefindPlugin } from 'vitepress-plugin-pagefind'
 import { globSync } from 'glob'
 
-const tidy = e => e.replace('wardley-maps-mermaid/', '')
+const tidy = e => e.replace('source/', '')
 
 export default withMermaid({
   title: 'wardley-mermaid-vitepress',
@@ -16,7 +16,7 @@ export default withMermaid({
   head: [['link', { rel: 'icon', href: 'data:;base64,=' }]],
 
   themeConfig: {
-    sidebar: globSync('wardley-maps-mermaid/*/', { ignore: ['.git/**'] }).filter(e => ![
+    sidebar: globSync('source/*/', { ignore: ['.git/**'] }).filter(e => ![
     'personal',
     'tools',
   ].includes(e.split('/').pop())).sort().map(path => {

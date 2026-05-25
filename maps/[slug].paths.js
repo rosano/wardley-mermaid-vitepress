@@ -3,8 +3,8 @@ import { globSync } from 'glob'
 
 export default {
   paths() {
-    return globSync('wardley-maps-mermaid/**/*.mmd', { ignore: ['.git/**'] }).map(path => {
-      const slug = path.replace('wardley-maps-mermaid/', '').replace('.mmd', '')
+    return globSync('source/**/*.mmd', { ignore: ['.git/**'] }).map(path => {
+      const slug = path.replace('source/', '').replace('.mmd', '')
       return {
         params: {
           slug: slug.toLowerCase(),
