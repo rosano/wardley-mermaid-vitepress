@@ -8,11 +8,17 @@ export default {
       return {
         params: {
           slug: slug.toLowerCase(),
-          title: slug.split('/').pop(),
-          link: 'https://github.com/swardley/WARDLEY-MAP-REPOSITORY/blob/main/' + slug
         },
-        content: readFileSync(path, 'utf8'),
+        content: `
+# ${ slug.split('/').pop() }
+
+\`\`\`mermaid
+${ readFileSync(path, 'utf8') }
+\`\`\`
+
+[source](https://github.com/swardley/WARDLEY-MAP-REPOSITORY/blob/main/${ encodeURIComponent(slug) })
+`,
       }
     })
-  }
+  },
 }
